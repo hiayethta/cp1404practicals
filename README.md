@@ -1,2 +1,2 @@
-# cp1404_practicals
-CP1404 practical work project
+# CP1404 Practicals
+Practical work for IT@JCU CP1404, 2024
