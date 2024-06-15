@@ -42,6 +42,10 @@ print(numbers)
 
 # TODO: list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
+filtered_numbers = []
+greater_than_nine = [number for number in numbers if number > 9]
+filtered_numbers = filtered_numbers + greater_than_nine  # add numbers to list
+print(filtered_numbers)
 
 # TODO: (more advanced) use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters
