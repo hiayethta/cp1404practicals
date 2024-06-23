@@ -2,7 +2,7 @@
 Word Occurrences
 Program to count the occurrences of each word in a string.
 Estimate: 20 minutes
-Actual:   32 minutes
+Actual:   29 minutes
 """
 
 PUNCTUATION_MARKS = ".,;:'!?-"
