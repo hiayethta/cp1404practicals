@@ -9,8 +9,13 @@ INDEX_OF_COUNTRY = 1
 INDEX_OF_CHAMPION = 2
 
 
-def get_records():
-    global records
+def main():
+    records = get_records[FILENAME]
+    champion_to_count, countries = process_records(records)
+    display_results(champion_to_count, countries)
+
+
+def get_records(filename):
     records = []
     with open(FILENAME, "r", encoding="utf-8") as in_file:
         in_file.readline()
@@ -19,18 +24,7 @@ def get_records():
             records.append(parts)
 
 
-def main():
-    global record, champion_to_count, countries
-    record = get_records[FILENAME]
-    champion_to_count, countries = process_records(records)
-    display_results(champion_to_count, countries)
-
-
-main()
-
-
-def process_records():
-    global champion_to_count, countries, record
+def process_records(records):
     champion_to_count = {}
     countries = set()
     for record in records:
@@ -48,3 +42,6 @@ def display_results(champion_to_count, countries):
         print(name, count)
     print(f"\n These {len(countries)} countries have won Wimbledon: ")
     print(", ".join(country for country in sorted(countries)))
+
+
+main()
