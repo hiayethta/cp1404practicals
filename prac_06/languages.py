@@ -2,8 +2,8 @@
 CP1404 Practical - Client code for program that prints
 the dynamic programming languages.
 
-Estimated Completion: 35 minutes (3:08pm)
-Actual:
+Estimated Completion: 35 minutes
+Actual: 22 minutes
 """
 
 from prac_06.programming_language import ProgrammingLanguage
