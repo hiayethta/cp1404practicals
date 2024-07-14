@@ -13,4 +13,4 @@ while colour != "":
         print(colour, "is", COLOUR_TO_HEX_CODE[colour])
     except KeyError:
         print("Invalid colour entered.")
-    colour = input("Enter colour: ")
+    colour = input("Enter colour: ").title()

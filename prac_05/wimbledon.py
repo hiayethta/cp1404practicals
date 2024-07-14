@@ -11,7 +11,7 @@ INDEX_OF_CHAMPION = 2
 
 def main():
     """Read data from file and print Wimbledon champions with countries"""
-    records = get_records[FILENAME]
+    records = get_records(FILENAME)
     champion_to_count, countries = process_records(records)
     display_results(champion_to_count, countries)
 
@@ -24,6 +24,7 @@ def get_records(filename):
         for line in in_file:
             parts = line.strip().split(",")
             records.append(parts)
+    return parts
 
 
 def process_records(records):
@@ -44,7 +45,7 @@ def display_results(champion_to_count, countries):
     print("Wimbledon Champions: ")
     for name, count in champion_to_count.items():
         print(name, count)
-    print(f"\n These {len(countries)} countries have won Wimbledon: ")
+    print(f"\nThese {len(countries)} countries have won Wimbledon: ")
     print(", ".join(country for country in sorted(countries)))
 
 
