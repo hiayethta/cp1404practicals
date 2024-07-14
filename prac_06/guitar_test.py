@@ -3,7 +3,7 @@ CP1406 Practical - program to test if methods from Guitar class
 function as intended
 
 Estimated completion time: 40 minutes
-Actual:
+Actual: 36 minutes
 """
 
 from prac_06.guitar import Guitar
