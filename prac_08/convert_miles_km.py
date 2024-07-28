@@ -38,6 +38,16 @@ class MilesToKilometres(App):
         except ValueError:
             return 0
 
+    def handle_increment(self, change):
+        """
+        handle up/down button press, update the text input with new value,
+        then call calculate function
+        :param change: amount to change
+        """
+        value = self.get_valid_miles() + change
+        self.root.ids.output_label.text = str(value)
+        self.handle_calculate()
+
 
 # create and start the App running
 MilesToKilometres().run()
