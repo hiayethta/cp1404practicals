@@ -45,7 +45,7 @@ class MilesToKilometres(App):
         :param change: amount to change
         """
         value = self.get_valid_miles() + change
-        self.root.ids.output_label.text = str(value)
+        self.root.ids.input_miles.text = str(value)
         self.handle_calculate()
 
 
