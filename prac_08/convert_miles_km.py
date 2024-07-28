@@ -23,6 +23,7 @@ class MilesToKilometres(App):
 
     def handle_calculate(self):
         """Handle calculation from miles to kilometres, output result to label"""
+        value = self.get_valid_miles()
         result = value * MILES_TO_KM
         self.root.ids.output_label.text = str(result)
 
