@@ -23,5 +23,4 @@ while True:
         print(e.options)
     except wikipedia.exceptions.PageError:
         print(f'Page id "{prompt}" does not match any pages. Try another id! .')
-    prompt = input("Enter a phrase or title: ").strip()
 print("Program finished.")
