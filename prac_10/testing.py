@@ -22,7 +22,17 @@ def is_long_word(word, length=5):
     >>> is_long_word("Python", 6)
     True
     """
-    return len(word) > length
+    long_word = False  # Sets the default value
+    if len(word) >= length:
+        long_word = True
+        return long_word
+    else:
+        return long_word
+
+
+assert is_long_word("not") == False
+assert is_long_word("supercalifrag") == True
+assert is_long_word("Python") == True
 
 
 def run_tests():
