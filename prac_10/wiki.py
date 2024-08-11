@@ -10,11 +10,14 @@ Actual:
 import wikipedia
 from wikipedia import DisambiguationError
 
-prompt = input("Enter a phrase or title: ").strip()
-while prompt != "":
+while True:
+    prompt = input("Enter a phrase or title: ").strip()
+    if not prompt:
+        print("Program finished.")
+        break
     try:
         search_result_page = wikipedia.page(prompt, auto_suggest=False)
-        print(f"{search_result_page.prompt}\n{search_result_page.summary}\n{search_result_page.url}\n")
+        print(f"{search_result_page.title}\n{search_result_page.summary}\n{search_result_page.url}\n")
     except wikipedia.exceptions.DisambiguationError as e:
         print(f'We need a more specific title. Try one of the following, or a new search:')
         print(e.options)
