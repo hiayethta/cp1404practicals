@@ -5,10 +5,9 @@ that asks the user to input a phrase or title, then print its
 details.
 
 Estimated time to complete: 30 minutes
-Actual:
+Actual: 48 minutes
 """
 import wikipedia
-from wikipedia import DisambiguationError
 
 while True:
     prompt = input("Enter a phrase or title: ").strip()
